@@ -41,8 +41,12 @@ public class ATMInterface {
 
                         case 1 -> {
                             System.out.format("\nTransaction History of %s\n", user.getName());
-                            for (String q : user.transactionHistory) {
-                                System.out.println(q);
+                            if(user.transactionHistory == null) {
+                                System.out.println("No transaction done");
+                            }else {
+                                for (String q : user.transactionHistory) {
+                                    System.out.println(q);
+                                }
                             }
                         }
 
