@@ -61,7 +61,6 @@ public class ATMFunctions {
 
     public void transfer(Long accountNo, double amount) {
         if (accessed){
-            System.out.println(user2.getAccountNo());
             if (user2.getAccountNo().equals(accountNo)) {
                 if (user1.getBalance() < amount) {
                     System.out.println("Insufficient Balance. Try again.");
